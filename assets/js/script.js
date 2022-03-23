@@ -57,3 +57,7 @@ function enviar() {
         alert("Preencha corretamento os campos antes de enviar");
     }
 }
+
+function scr() {
+    window.scrollTo(0, 928);
+}

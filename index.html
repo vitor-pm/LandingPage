@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-br" style="scroll-behavior: smooth;">
 
 <head>
     <!-- Required meta tags -->
@@ -10,12 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
-    <style>
-        .tm-social {
-            width: 50px;
-            padding: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="./assets/style/style.css">
 
     <title>Landing Page</title>
 </head>
@@ -23,7 +18,7 @@
 <body>
     <div class="container-lg d-inline p-0 bg-info">
         <!-- navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="#">Landing Page</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -38,7 +33,7 @@
                             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#video">Video</a>
+                            <a class="nav-link" href="javascript:void(0)" onclick="scr()">Video</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -56,7 +51,7 @@
                             <a class="nav-link" href="#contato">Contato</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Sobre</a>
+                            <a class="nav-link" href="#" onClick="scroll(0, 928);">Sobre</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="">Carreiras</a>
@@ -72,38 +67,42 @@
         <!-- /navbar -->
 
         <!-- carousel -->
-        <div class="row justify-content-md-center m-0 bg-light p-3">
-            <div class="col-8 ">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner border rounded-lg">
-                        <div class="carousel-item active">
-                            <img src="./assets/img/o-que-e-o-html5.jpg" class="d-block w-100" alt="Imagem logo html">
+        <div class="container-fluid p-0 vh-100">
+            <div class="row h-100 justify-content-center m-0 bg-light">
+                <div class="col-8 d-flex align-items-center">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner border rounded-lg">
+                            <div class="carousel-item active">
+                                <img src="./assets/img/o-que-e-o-html5.jpg" class="d-block w-100"
+                                    alt="Imagem logo html">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/img/css.webp" class="d-block w-100" alt="Imagem logo css">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/img/js.webp" class="d-block w-100" alt="Imagem logo javascript">
+                            </div>
                         </div>
-                        <div class="carousel-item">
-                            <img src="./assets/img/css.webp" class="d-block w-100" alt="Imagem logo css">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./assets/img/js.webp" class="d-block w-100" alt="Imagem logo javascript">
-                        </div>
+                        <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </button>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators"
-                        data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators"
-                        data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </button>
                 </div>
             </div>
         </div>
+
         <!-- /carousel -->
         <!-- cards -->
         <div class="row justify-content-center m-0 bg-light pb-5">
@@ -121,7 +120,8 @@
                 <div class="card" style="width: 18rem;">
                     <img src="./assets/img/spring.jpg" class="card-img-top" alt="Imagem logo springboot">
                     <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                        <p class="card-text">Some quick example text to build on the card title and make up
+                            the bulk
                             of
                             the card's content.</p>
                     </div>
@@ -130,7 +130,7 @@
         </div>
         <!-- /cards -->
         <!-- video -->
-        <div class="row justify-content-center m-0 bg-light p-3">
+        <div id="video" class="row justify-content-center m-0 bg-light p-3">
             <div class="col-4">
                 <h2>Lorem</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas rutrum massa, ut ultrices
@@ -143,7 +143,7 @@
                 <p></p>
             </div>
             <div class="col-4">
-                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/UNSoPa-XQN0"
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/UNSoPa-XQN0"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
@@ -184,7 +184,9 @@
                             </label>
                         </div>
                     </div>
-                    <button class="btn btn-primary" type="submit" onclick="enviar()">Enviar</button>
+                    <button class="custom-btn button-effect ml-2" type="submit"
+                        onclick="enviar()"><span>Enviar</span></button>
+
                 </form>
             </div>
         </div>
